@@ -44,16 +44,20 @@ class LeaflinkStream(HttpStream, ABC):
     def next_page_token(self, response: requests.Response) -> Optional[Mapping[str, Any]]:
         nextPageToken = response.json().get("next")
 
+        params = {}
+
         if nextPageToken:
-            return {"nextPageToken": nextPageToken}
+            parsed = parse.urlsplit(nextPageToken)
+            page = parsed.scheme + "://" + parsed.netloc + parsed.path
+
+            params.update(dict(parse.parse_qsl(
+                parse.urlsplit(nextPageToken).query)))
+
+            return params
         else:
             return None
 
     def path(self, **kwargs) -> str:
-        """
-        This one is tricky, the API path is the class name by default. Airbyte will load  `url_base`/`classname` by
-        default, like https://app-us2.wrike.com/api/v4/tasks if the class name is Tasks
-        """
         return self.__class__.__name__.lower()
 
     def parse_response(self, response: requests.Response, **kwargs) -> Iterable[Mapping]:
@@ -67,11 +71,13 @@ class Customers(LeaflinkStream):
 
 
 class ProductCategories(LeaflinkStream):
-    pass
+    def path(self, **kwargs) -> str:
+        return "product-categories/"
 
 
 class ProductLines(LeaflinkStream):
-    pass
+    def path(self, **kwargs) -> str:
+        return "product-lines/"
 
 
 class Products(LeaflinkStream):
@@ -79,17 +85,20 @@ class Products(LeaflinkStream):
 
 
 class OrdersReceived(LeaflinkStream):
-    primary_key = 'id'
+    primary_key = 'number'
 
-    pass
+    def path(self, **kwargs) -> str:
+        return "product-categories/"
 
 
 class LineItems(LeaflinkStream):
-    pass
+    def path(self, **kwargs) -> str:
+        return "line-items/"
 
 
 class OrderEventLogs(LeaflinkStream):
-    pass
+    def path(self, **kwargs) -> str:
+        return "order-event-logs/"
 
 
 class IncrementalLeaflinkStream(LeaflinkStream, ABC):
