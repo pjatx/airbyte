@@ -1,0 +1,401 @@
+{
+  "streams": [
+    {
+      "stream": {
+        "name": "customers",
+        "json_schema": {
+          "type": ["null", "object"],
+          "properties": {
+            "id": { "type": ["null", "integer"] },
+            "state": { "type": ["null", "string"] },
+            "managers": {
+              "type": ["null", "array"],
+              "items": { "type": ["null", "integer"] }
+            },
+            "created_on": { "type": ["null", "string"], "format": "date-time" },
+            "modified": { "type": ["null", "string"], "format": "date-time" },
+            "next_contact_date": {
+              "type": ["null", "string"],
+              "format": "date-time"
+            },
+            "nickname": { "type": ["null", "string"] },
+            "external_id": { "type": ["null", "string"] },
+            "ext_acct_id": { "type": ["null", "integer"] },
+            "license_number": { "type": ["null", "string"] },
+            "old_license_number": { "type": ["null", "string"] },
+            "license_inactive": { "type": ["null", "boolean"] },
+            "business_identifier": { "type": ["null", "string"] },
+            "ein": { "type": ["null", "string"] },
+            "directions": { "type": ["null", "string"] },
+            "delivery_preferences": { "type": ["null", "string"] },
+            "currency": { "type": ["null", "string"] },
+            "shipping_charge": { "type": ["null", "number"] },
+            "brand": { "type": ["null", "string"] },
+            "name": { "type": ["null", "string"] },
+            "dba": { "type": ["null", "string"] },
+            "business_license_name": { "type": ["null", "string"] },
+            "description": { "type": ["null", "string"] },
+            "website": { "type": ["null", "string"] },
+            "address": { "type": ["null", "string"] },
+            "unit_number": { "type": ["null", "string"] },
+            "zipcode": { "type": ["null", "string"] },
+            "city": { "type": ["null", "string"] },
+            "county": { "type": ["null", "string"] },
+            "country": { "type": ["null", "string"] },
+            "lat": { "type": ["null", "string"] },
+            "long": { "type": ["null", "string"] },
+            "phone": { "type": ["null", "string"] },
+            "phone_extension": { "type": ["null", "string"] },
+            "email": { "type": ["null", "string"] },
+            "notes": { "type": ["null", "string"] },
+            "leaflink_last_views": {
+              "type": ["null", "string"],
+              "format": "date-time"
+            },
+            "leaflink_source": { "type": ["null", "boolean"] },
+            "archived": { "type": ["null", "boolean"] },
+            "delinquent": { "type": ["null", "boolean"] },
+            "discount_percent": { "type": ["null", "number"] },
+            "owner": { "type": ["null", "integer"] },
+            "partner": { "type": ["null", "integer"] },
+            "tier": { "type": ["null", "string"] },
+            "price_schedule": { "type": ["null", "string"] },
+            "service_zone": { "type": ["null", "string"] },
+            "license_type": { "type": ["null", "integer"] },
+            "payment_term": { "type": ["null", "integer"] },
+            "status": { "type": ["null", "integer"] }
+          }
+        },
+        "supported_sync_modes": ["full_refresh"],
+        "source_defined_primary_key": [["id"]]
+      },
+      "sync_mode": "full_refresh",
+      "destination_sync_mode": "overwrite"
+    },
+    {
+      "stream": {
+        "name": "product_categories",
+        "json_schema": {
+          "type": ["null", "object"],
+          "properties": {
+            "id": { "type": ["null", "integer"] },
+            "name": { "type": ["null", "string"] },
+            "slug": { "type": ["null", "string"] },
+            "description": { "type": ["null", "string"] }
+          }
+        },
+        "supported_sync_modes": ["full_refresh"],
+        "source_defined_primary_key": [["id"]]
+      },
+      "sync_mode": "full_refresh",
+      "destination_sync_mode": "overwrite"
+    },
+    {
+      "stream": {
+        "name": "product_lines",
+        "json_schema": {
+          "type": ["null", "object"],
+          "properties": {
+            "id": { "type": ["null", "integer"] },
+            "name": { "type": ["null", "string"] },
+            "brand": { "type": ["null", "string"] },
+            "menu_position": { "type": ["null", "integer"] }
+          }
+        },
+        "supported_sync_modes": ["full_refresh"],
+        "source_defined_primary_key": [["id"]]
+      },
+      "sync_mode": "full_refresh",
+      "destination_sync_mode": "overwrite"
+    },
+    {
+      "stream": {
+        "name": "products",
+        "json_schema": {
+          "type": ["null", "object"],
+          "properties": {
+            "id": { "type": ["null", "integer"] },
+            "created_on": { "type": ["null", "string"], "format": "date-time" },
+            "last_edit": { "type": ["null", "string"], "format": "date-time" },
+            "name": { "type": ["null", "string"] },
+            "sku": { "type": ["null", "string"] },
+            "description": { "type": ["null", "string"] },
+            "quantity": { "type": ["null", "number"] },
+            "reserved_qty": { "type": ["null", "number"] },
+            "display_name": { "type": ["null", "string"] },
+            "unit_multiplier": { "type": ["null", "integer"] },
+            "retail_price": {
+              "type": ["null", "object"],
+              "properties": {
+                "amount": { "type": ["null", "number"] },
+                "currency": { "type": ["null", "string"] }
+              }
+            },
+            "wholesale_price": {
+              "type": ["null", "object"],
+              "properties": {
+                "amount": { "type": ["null", "number"] },
+                "currency": { "type": ["null", "string"] }
+              }
+            },
+            "sale_price": {
+              "type": ["null", "object"],
+              "properties": {
+                "amount": { "type": ["null", "number"] },
+                "currency": { "type": ["null", "string"] }
+              }
+            },
+            "minimum_order": { "type": ["null", "number"] },
+            "maximum_order": { "type": ["null", "number"] },
+            "is_medical_line_item": { "type": ["null", "boolean"] },
+            "AVAILABLE_FOR_SAMPLES": { "type": ["null", "boolean"] },
+            "featured": { "type": ["null", "boolean"] },
+            "tagline": { "type": ["null", "string"] },
+            "allow_fractional_quantities": { "type": ["null", "boolean"] },
+            "parent": {
+              "type": ["null", "object"],
+              "properties": {
+                "id": { "type": ["null", "integer"] },
+                "name": { "type": ["null", "string"] }
+              }
+            },
+            "inventory_management": { "type": ["null", "integer"] },
+            "unit_of_measure": { "type": ["null", "string"] },
+            "sell_in_unit_of_measure": { "type": ["null", "string"] },
+            "unit_denomination": {
+              "type": ["null", "object"],
+              "properties": {
+                "id": { "type": ["null", "integer"] },
+                "value": { "type": ["null", "number"] },
+                "name": { "type": ["null", "string"] },
+                "label": { "type": ["null", "string"] }
+              }
+            },
+            "category": { "type": ["null", "number"] },
+            "seller": { "type": ["null", "integer"] },
+            "brand": { "type": ["null", "integer"] },
+            "product_line": { "type": ["null", "integer"] },
+            "manufacturer": { "type": ["null", "integer"] },
+            "strain_classification": { "type": ["null", "string"] },
+            "license": {
+              "type": ["null", "object"],
+              "properties": {
+                "id": { "type": ["null", "integer"] },
+                "number": { "type": ["null", "string"] },
+                "type": { "type": ["null", "string"] },
+                "display_type": { "type": ["null", "string"] },
+                "classification": { "type": ["null", "string"] }
+              }
+            },
+            "available_inventory": { "type": ["null", "number"] },
+            "children_count": { "type": ["null", "integer"] },
+            "price_schedule_price": {
+              "type": ["null", "object"],
+              "properties": {
+                "amount": { "type": ["null", "number"] },
+                "currency": { "type": ["null", "string"] }
+              }
+            },
+            "strain_classification_display": { "type": ["null", "string"] },
+            "modified": { "type": ["null", "string"], "format": "date-time" },
+            "sub_category": { "type": ["null", "integer"] }
+          }
+        },
+        "supported_sync_modes": ["full_refresh"],
+        "source_defined_primary_key": [["id"]]
+      },
+      "sync_mode": "full_refresh",
+      "destination_sync_mode": "overwrite"
+    },
+    {
+      "stream": {
+        "name": "line_items",
+        "json_schema": {
+          "type": ["null", "object"],
+          "properties": {
+            "id": { "type": ["null", "integer"] },
+            "ordered_unit_price": {
+              "type": ["null", "object"],
+              "properties": {
+                "amount": { "type": ["null", "string"] },
+                "currency": { "type": ["null", "string"] }
+              }
+            },
+            "quantity": { "type": ["null", "string"] },
+            "order": { "type": ["null", "string"] },
+            "product": { "type": ["null", "string"] },
+            "notes": { "type": ["null", "string"] },
+            "is_sample": { "type": ["null", "boolean"] },
+            "sale_price": {
+              "type": ["null", "object"],
+              "properties": {
+                "amount": { "type": ["null", "string"] },
+                "currency": { "type": ["null", "string"] }
+              }
+            },
+            "unit_multiplier": { "type": ["null", "integer"] },
+            "is_medical_line_item": { "type": ["null", "boolean"] },
+            "is_packed": { "type": ["null", "boolean"] },
+            "packed_at": { "type": ["null", "string"], "format": "date-time" },
+            "packed_by": { "type": ["null", "integer"] },
+            "unit_of_measure": { "type": ["null", "string"] },
+            "marked_for_deletion": { "type": ["null", "boolean"] },
+            "position": { "type": ["null", "integer"] },
+            "bulk_units": { "type": ["null", "integer"] },
+            "on_sale": { "type": ["null", "boolean"] },
+            "is_backorder": { "type": ["null", "boolean"] },
+            "order_id": { "type": ["null", "string"] },
+            "batch": { "type": ["null", "integer"] },
+            "package_tags": { "type": ["null", "string"] },
+            "wholesale_price": { "type": ["null", "string"] }
+          }
+        },
+        "supported_sync_modes": ["full_refresh"],
+        "source_defined_primary_key": [["id"]]
+      },
+      "sync_mode": "full_refresh",
+      "destination_sync_mode": "overwrite"
+    },
+    {
+      "stream": {
+        "name": "orders_received",
+        "json_schema": {
+          "type": ["null", "object"],
+          "properties": {
+            "number": { "type": ["null", "string"] },
+            "external_id_seller": { "type": ["null", "string"] },
+            "external_id_buyer": { "type": ["null", "string"] },
+            "ext_acct_id": { "type": ["null", "string"] },
+            "created_on": { "type": ["null", "string"], "format": "date-time" },
+            "user": { "type": ["null", "string"] },
+            "buyer": { "type": ["null", "integer"] },
+            "seller": { "type": ["null", "integer"] },
+            "customer": {
+              "type": ["null", "object"],
+              "properties": {
+                "id": { "type": ["null", "integer"] },
+                "display_name": { "type": ["null", "string"] },
+                "delinquent": { "type": ["null", "boolean"] },
+                "ext_acct_id": { "type": ["null", "integer"] }
+              }
+            },
+            "brand": { "type": ["null", "string"] },
+            "status": { "type": ["null", "string"] },
+            "manual": { "type": ["null", "boolean"] },
+            "discount_amount": { "type": ["null", "number"] },
+            "discount_type": { "type": ["null", "string"] },
+            "tax_amount": { "type": ["null", "number"] },
+            "tax_type": { "type": ["null", "string"] },
+            "shipping_charge": {
+              "type": ["null", "object"],
+              "properties": {
+                "currency": { "type": ["null", "string"] },
+                "amount": { "type": ["null", "number"] }
+              }
+            },
+            "total": {
+              "type": ["null", "object"],
+              "properties": {
+                "currency": { "type": ["null", "string"] },
+                "amount": { "type": ["null", "number"] }
+              }
+            },
+            "payment_term": { "type": ["null", "string"] },
+            "payment_due_date": {
+              "type": ["null", "string"],
+              "format": "date-time"
+            },
+            "paid": { "type": ["null", "boolean"] },
+            "paid_date": { "type": ["null", "string"], "format": "date-time" },
+            "ship_date": { "type": ["null", "string"], "format": "date-time" },
+            "shipping_details": { "type": ["null", "string"] },
+            "notes": { "type": ["null", "string"] },
+            "internal_notes": { "type": ["null", "string"] },
+            "delivery_preferences": { "type": ["null", "string"] },
+            "sales_reps": {
+              "type": ["null", "array"],
+              "items": {
+                "type": ["null", "object"],
+                "properties": {
+                  "id": { "type": ["null", "integer"] },
+                  "user": { "type": ["null", "string"] }
+                }
+              }
+            },
+            "classification": { "type": ["null", "string"] },
+            "payment_balance": { "type": ["null", "number"] },
+            "available_transitions": {
+              "type": ["null", "array"],
+              "items": { "type": ["null", "string"] }
+            },
+            "modified": { "type": ["null", "string"], "format": "date-time" },
+            "has_special_requests": { "type": ["null", "boolean"] },
+            "delivery_provider": { "type": ["null", "string"] },
+            "order_taxes": {
+              "type": ["null", "array"],
+              "items": { "type": ["null", "number"] }
+            },
+            "delivery_info": { "type": ["null", "string"] },
+            "is_combination": { "type": ["null", "boolean"] },
+            "order_number": { "type": ["null", "string"] },
+            "order_seller_number": { "type": ["null", "string"] },
+            "order_buyer_number": { "type": ["null", "string"] },
+            "order_short_number": { "type": ["null", "string"] },
+            "distributor": { "type": ["null", "string"] }
+          }
+        },
+        "supported_sync_modes": ["full_refresh"],
+        "source_defined_primary_key": [["id"]]
+      },
+      "sync_mode": "full_refresh",
+      "destination_sync_mode": "overwrite"
+    },
+    {
+      "stream": {
+        "name": "order_event_logs",
+        "json_schema": {
+          "type": ["null", "object"],
+          "properties": {
+            "id": { "type": ["null", "integer"] },
+            "order": { "type": ["null", "string"] },
+            "author_name": { "type": ["null", "string"] },
+            "by": { "type": ["null", "string"] },
+            "event_type": { "type": ["null", "string"] },
+            "description": { "type": ["null", "string"] },
+            "created_on": { "type": ["null", "string"], "format": "date-time" },
+            "modified": { "type": ["null", "string"], "format": "date-time" },
+            "timestamp": { "type": ["null", "string"], "format": "date-time" },
+            "changed_fields": {
+              "type": ["null", "object"],
+              "properties": {
+                "status": {
+                  "type": ["null", "object"],
+                  "properties": {
+                    "original": { "type": ["null", "string"] },
+                    "new": { "type": ["null", "string"] }
+                  }
+                },
+                "ship_date": {
+                  "type": ["null", "object"],
+                  "properties": {
+                    "original": {
+                      "type": ["null", "string"],
+                      "format": "date-time"
+                    },
+                    "new": { "type": ["null", "string"], "format": "date-time" }
+                  }
+                }
+              }
+            },
+            "source": { "type": ["null", "string"] },
+            "source_detail": { "type": ["null", "string"] }
+          }
+        },
+        "supported_sync_modes": ["full_refresh"],
+        "source_defined_primary_key": [["id"]]
+      },
+      "sync_mode": "full_refresh",
+      "destination_sync_mode": "overwrite"
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "type": ["null", "object"],
+  "properties": {
+    "id": {
+      "type": ["null", "integer"]
+    },
+    "state": {
+      "type": ["null", "string"]
+    },
+    "managers": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "created_on": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "modified": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "next_contact_date": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "nickname": {
+      "type": ["null", "string"]
+    },
+    "external_id": {
+      "type": ["null", "string"]
+    },
+    "ext_acct_id": {
+      "type": ["null", "integer"]
+    },
+    "license_number": {
+      "type": ["null", "string"]
+    },
+    "old_license_number": {
+      "type": ["null", "string"]
+    },
+    "license_inactive": {
+      "type": ["null", "boolean"]
+    },
+    "business_identifier": {
+      "type": ["null", "string"]
+    },
+    "ein": {
+      "type": ["null", "string"]
+    },
+    "directions": {
+      "type": ["null", "string"]
+    },
+    "delivery_preferences": {
+      "type": ["null", "string"]
+    },
+    "currency": {
+      "type": ["null", "string"]
+    },
+    "shipping_charge": {
+      "type": ["null", "number"]
+    },
+    "brand": {
+      "type": ["null", "string"]
+    },
+    "name": {
+      "type": ["null", "string"]
+    },
+    "dba": {
+      "type": ["null", "string"]
+    },
+    "business_license_name": {
+      "type": ["null", "string"]
+    },
+    "description": {
+      "type": ["null", "string"]
+    },
+    "website": {
+      "type": ["null", "string"]
+    },
+    "address": {
+      "type": ["null", "string"]
+    },
+    "unit_number": {
+      "type": ["null", "string"]
+    },
+    "zipcode": {
+      "type": ["null", "string"]
+    },
+    "city": {
+      "type": ["null", "string"]
+    },
+    "county": {
+      "type": ["null", "string"]
+    },
+    "country": {
+      "type": ["null", "string"]
+    },
+    "lat": {
+      "type": ["null", "string"]
+    },
+    "long": {
+      "type": ["null", "string"]
+    },
+    "phone": {
+      "type": ["null", "string"]
+    },
+    "phone_extension": {
+      "type": ["null", "string"]
+    },
+    "email": {
+      "type": ["null", "string"]
+    },
+    "notes": {
+      "type": ["null", "string"]
+    },
+    "leaflink_last_views": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "leaflink_source": {
+      "type": ["null", "boolean"]
+    },
+    "archived": {
+      "type": ["null", "boolean"]
+    },
+    "delinquent": {
+      "type": ["null", "boolean"]
+    },
+    "discount_percent": {
+      "type": ["null", "number"]
+    },
+    "owner": {
+      "type": ["null", "integer"]
+    },
+    "partner": {
+      "type": ["null", "integer"]
+    },
+    "tier": {
+      "type": ["null", "string"]
+    },
+    "price_schedule": {
+      "type": ["null", "string"]
+    },
+    "service_zone": {
+      "type": ["null", "string"]
+    },
+    "license_type": {
+      "type": ["null", "integer"]
+    },
+    "payment_term": {
+      "type": ["null", "integer"]
+    },
+    "status": {
+      "type": ["null", "integer"]
+    }
+  }
+}

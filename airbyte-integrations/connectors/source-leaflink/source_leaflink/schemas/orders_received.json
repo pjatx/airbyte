@@ -1,0 +1,351 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "number": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "external_id_seller": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "external_id_buyer": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ext_acct_id": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "created_on": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "format": "date-time"
+    },
+    "user": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "buyer": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "seller": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "customer": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "id": {
+          "type": [
+            "null",
+            "integer"
+          ]
+        },
+        "display_name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "delinquent" : {
+          "type": [
+            "null",
+            "boolean"
+          ]
+        },
+        "ext_acct_id" : {
+          "type": [
+            "null",
+            "integer"
+          ]
+        }
+      }
+    },
+    "brand": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "status": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "manual": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    "discount_amount": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
+    "discount_type": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "tax_amount": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
+    "tax_type": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "shipping_charge": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "currency": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "amount": {
+          "type": [
+            "null",
+            "number"
+          ]
+        }
+      }
+    },
+    "total": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "currency": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "amount": {
+          "type": [
+            "null",
+            "number"
+          ]
+        }
+      }
+    },
+    "payment_term": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "payment_due_date": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "format": "date-time"
+    },
+    "paid": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    "paid_date": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "format": "date-time"
+    },
+    "ship_date": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "format": "date-time"
+    },
+    "shipping_details": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "notes": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "internal_notes": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "delivery_preferences": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "sales_reps": {
+      "type": [
+        "null",
+        "array"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "id": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "user": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      }
+    },
+    "classification": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "payment_balance": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
+    "available_transitions": {
+      "type": [
+        "null",
+        "array"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "string"
+        ]
+      }
+    },
+    "modified": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "format": "date-time"
+    },
+    "has_special_requests": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    "delivery_provider": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "order_taxes": {
+      "type": [
+        "null",
+        "array"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "number"
+        ]
+      }
+    },
+    "delivery_info": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "is_combination": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    "order_number": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "order_seller_number": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "order_buyer_number": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "order_short_number": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "distributor": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  }
+}

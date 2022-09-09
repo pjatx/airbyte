@@ -1,0 +1,70 @@
+{
+  "type": ["null", "object"],
+  "properties": {
+    "id": {
+      "type": ["null", "integer"]
+    },
+    "order": {
+      "type": ["null", "string"]
+    },
+    "author_name": {
+      "type": ["null", "string"]
+    },
+    "by": {
+      "type": ["null", "string"]
+    },
+    "event_type": {
+      "type": ["null", "string"]
+    },
+    "description": {
+      "type": ["null", "string"]
+    },
+    "created_on": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "modified": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "timestamp": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "changed_fields": {
+      "type": ["null", "object"],
+      "properties": {
+        "status": {
+          "type": ["null", "object"],
+          "properties": {
+            "original": {
+              "type": ["null", "string"]
+            },
+            "new": {
+              "type": ["null", "string"]
+            }
+          }
+        },
+        "ship_date": {
+          "type": ["null", "object"],
+          "properties": {
+            "original": {
+              "type": ["null", "string"],
+              "format": "date-time"
+            },
+            "new": {
+              "type": ["null", "string"],
+              "format": "date-time"
+            }
+          }
+        }
+      }
+    },
+    "source": {
+      "type": ["null", "string"]
+    },
+    "source_detail": {
+      "type": ["null", "string"]
+    }
+  }
+}

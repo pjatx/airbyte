@@ -1,0 +1,175 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "id": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "ordered_unit_price": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "amount": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "currency": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      }
+    },
+    "quantity": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "order": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "product": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "notes": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "is_sample": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    "sale_price": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "amount": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "currency": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      }
+    },
+    "unit_multiplier": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "is_medical_line_item": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    "is_packed": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    "packed_at": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "format": "date-time"
+    },
+    "packed_by": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "unit_of_measure": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "marked_for_deletion": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    "position": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "bulk_units": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "on_sale": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    "is_backorder": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    "order_id": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "batch": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "package_tags": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "wholesale_price": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  }
+}
