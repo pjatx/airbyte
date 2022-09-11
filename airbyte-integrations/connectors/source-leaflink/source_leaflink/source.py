@@ -152,11 +152,11 @@ class SourceLeaflink(AbstractSource):
     def streams(self, config: Mapping[str, Any]) -> List[Stream]:
         auth = TokenAuthenticator(token=config["api_key"], auth_method="App")
         return [
+            OrdersReceived(authenticator=auth, base_url=config["base_url"]),
             Customers(authenticator=auth, base_url=config["base_url"]),
             ProductCategories(authenticator=auth, base_url=config["base_url"]),
             ProductLines(authenticator=auth, base_url=config["base_url"]),
             Products(authenticator=auth, base_url=config["base_url"]),
             LineItems(authenticator=auth, base_url=config["base_url"]),
-            OrdersReceived(authenticator=auth, base_url=config["base_url"]),
             OrderEventLogs(authenticator=auth, base_url=config["base_url"]),
         ]
