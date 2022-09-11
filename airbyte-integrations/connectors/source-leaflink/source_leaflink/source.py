@@ -91,7 +91,7 @@ class OrdersReceived(LeaflinkStream):
     primary_key = 'number'
 
     def path(self, **kwargs) -> str:
-        return "product-categories/"
+        return "orders-received/"
 
 
 class LineItems(LeaflinkStream):
