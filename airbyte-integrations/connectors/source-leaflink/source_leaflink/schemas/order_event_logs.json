@@ -49,12 +49,10 @@
           "type": ["null", "object"],
           "properties": {
             "original": {
-              "type": ["null", "string"],
-              "format": "date-time"
+              "type": ["null", "string"]
             },
             "new": {
-              "type": ["null", "string"],
-              "format": "date-time"
+              "type": ["null", "string"]
             }
           }
         }

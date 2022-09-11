@@ -53,6 +53,9 @@ class LeaflinkStream(HttpStream, ABC):
             params.update(dict(parse.parse_qsl(
                 parse.urlsplit(nextPageToken).query)))
 
+            # print(params)
+            # if params.get("offset") == '1000':
+            #     return None
             return params
         else:
             return None
