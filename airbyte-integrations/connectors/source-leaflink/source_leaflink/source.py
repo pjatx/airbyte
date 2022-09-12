@@ -85,13 +85,13 @@ class LeaflinkIncrementalMixin(HttpStream, ABC):
         return {self.cursor_field: latest_benchmark}
 
     def request_params(self, stream_state: Mapping[str, Any], **kwargs) -> MutableMapping[str, Any]:
+
         params = super().request_params(stream_state=stream_state)
         print(params)
         start_time = self._start_time
         if stream_state.get(self.cursor_field):
             start_time = stream_state[self.cursor_field]
-        params.update({"start_time": start_time,
-                      "end_time": pendulum.now().int_timestamp})
+        params.update({"modified__gt": start_time})
         return params
 
 
