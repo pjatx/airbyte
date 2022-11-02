@@ -1,14 +1,14 @@
 #
 # Copyright (c) 2022 Airbyte, Inc., all rights reserved.
 #
-from airbyte_cdk.logger import AirbyteLogger
 
 from abc import ABC
+from pathlib import Path
 from typing import Any, Iterable, List, Mapping, MutableMapping, Optional, Tuple
 from urllib import parse
-from pathlib import Path
 
 import requests
+from airbyte_cdk.logger import AirbyteLogger
 from airbyte_cdk.sources import AbstractSource
 from airbyte_cdk.sources.streams import Stream
 from airbyte_cdk.sources.streams.http import HttpStream
@@ -20,7 +20,7 @@ SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
 
 
 class LeaflinkStream(HttpStream, ABC):
-    primary_key = 'id'
+    primary_key = "id"
     url_base = ""
 
     def __init__(self, base_url: str, **kwargs):
@@ -28,7 +28,8 @@ class LeaflinkStream(HttpStream, ABC):
         self.url_base = base_url
 
     def parse_response(
-        self, response: requests.Response,
+        self,
+        response: requests.Response,
         stream_state: Mapping[str, Any],
         stream_slice: Mapping[str, Any] = None,
         next_page_token: Mapping[str, Any] = None,
@@ -50,8 +51,7 @@ class LeaflinkStream(HttpStream, ABC):
             parsed = parse.urlsplit(nextPageToken)
             page = parsed.scheme + "://" + parsed.netloc + parsed.path
 
-            params.update(dict(parse.parse_qsl(
-                parse.urlsplit(nextPageToken).query)))
+            params.update(dict(parse.parse_qsl(parse.urlsplit(nextPageToken).query)))
 
             # print(params)
             # if params.get("offset") == '1000':
@@ -88,7 +88,7 @@ class Products(LeaflinkStream):
 
 
 class OrdersReceived(LeaflinkStream):
-    primary_key = 'number'
+    primary_key = "number"
 
     def path(self, **kwargs) -> str:
         return "orders-received/"
@@ -138,8 +138,7 @@ class SourceLeaflink(AbstractSource):
         api_key = config["api_key"]
         base_url = config["base_url"]
 
-        headers = {"Authorization": f"App {api_key}",
-                   "Content-Type": "application/json"}
+        headers = {"Authorization": f"App {api_key}", "Content-Type": "application/json"}
         url = f"{base_url}/orders-received/"
 
         try:
