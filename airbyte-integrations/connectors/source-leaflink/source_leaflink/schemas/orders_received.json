@@ -93,6 +93,9 @@
       "type": ["null", "string"],
       "format": "date-time"
     },
+    "payment_status": {
+      "type": ["null", "string"]
+    },
     "paid": {
       "type": ["null", "boolean"]
     },
